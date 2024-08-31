@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-white to-green-800">
+
+    <!-- navbar -->
+    <section class="items-center mx-auto p-4 top-0 z-10 sticky"> 
+        <nav class="bg-white md:mx-20 border border-solid border-black md:border-black md:bg-green-800 rounded-3xl">
+            <!-- Flex column -->
+             <div class="flex items-center justify-between ">
+                <!-- Logo -->
+                 <div class="pt-2 p-2 flex flex-row space-x-3">
+                    <img src="img/favicon-1.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="35" height="35">
+                    <h1 class="text-3xl"></h1>
+                 </div>
+                 <!-- Menu items -->
+                <div class="hidden space-x-6 lg:flex text-white">
+                    <a href="#home" class="hover:font-bold">Home</a>
+                    <a href="#about" class="hover:font-bold">About Us</a>
+                    <a href="#pricing" class="hover:font-bold">Pricing</a>
+                    <a href="#Blog" class="hover:font-bold">Blog</a>
+                    <a href="#testimonials" class="hover:font-bold">Client-testimonials</a>
+                    <a href="#contact" class="hover:font-bold">Contact Us</a>
+                </div>
+                <!-- button -->
+                <button class="hidden group relative lg:inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-black font-medium text-white transition-all duration-300 hover:w-32 border border-solid border-black"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Get Started</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
+    
+                <!-- Harmburger Icon -->
+                 <button id="menu-btn" class="cursor-pointer text-4xl font-bold focus:outline-none lg:hidden p-3">
+                    &#9776;
+                 </button>
+            </div>
+        </nav>
+    </section>
+
+    <!-- hero section -->
+     <!-- h-full w-full bg-white relative -->
+    <section id="home" class="scroll-mt-10 py-6 h-full w-full relative">
+
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:44px_54px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+
+        <div class="text-center items-center space-y-3 py-16 md:px-10 px-5">
+            <h1>TANZANIA'S LEADING WELLNESS ORGANIZATION</h1>
+
+            <div class="space-y-5 md:px-24">
+                <h1 class="md:text-6xl text-5xl font-bold">Building high quality, affordable and innovative wellness solutions to cooperate clients.</h1>
+                <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem, atque iusto amet impedit dolorem expedita voluptates molestias vero totam ad veniam distinctio iure et deleniti eum. Ut, aut!</h1>
+
+                <!-- button -->
+                <div class="md:pt-5 pt-3">
+                    <button class="relative z-0 h-12 rounded-full bg-black px-6 text-white after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-black hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">BOOK A FREE CONSULTATION &rarr;</button>
+                </div>
+            </div>              
+        </div>
+
+        <div class="md:px-32 py-2 px-5">
+            <img src="img/features-img.jpg" class="w-90 rounded-3xl transform transition-all hover:scale-x-110 shadow-[#00000059_0px_5px_15px] duration-500" alt="">
+        </div>
+    </section>
+
+    <!-- companies section -->
+    <section class="py-10 h-full w-full relative">
+        <div class="space-y-6 items-center text-center px-6">
+            <h1 class="font-semibold">TRUSTED BY WORLD LEADING START-UPS AND COMPANIES</h1>
+
+            <!-- companies logos -->
+            <div class="flex flex-row space-x-16 justify-center md:justify-between md:px-28">
+                <img src="img/favicon-1.png" width="50" height="50" alt="">
+                <img src="img/favicon-1.png" width="50" height="50" alt="">
+                <img src="img/favicon-1.png" width="50" height="50" alt="">
+            </div>
+
+            <!-- put a button here that says MORE to see more companies -->
+        </div>
+    </section>
+
+    <!-- services section -->
+    <section class="py-8 w-full relative space-y-6">
+        <div class="grid space-y-4 text-center lg:text-start px-6 md:px-28">
+            <h1 class="font-semibold">WHAT WE OFFER</h1>
+            <h1 class="font-bold text-3xl">We offer a wide range of services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quaerat quisquam dicta aut dolorem maiores placeat alias corrupti officiis dignissimos.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row justify-center px-6 md:px-28 lg:space-x-4">
+            <!-- item 1 -->
+            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500"> 
+                <p class="text-xl font-bold mb-2">Website Design</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
+                </p>
+                <!-- put a button here saying VIEW DETAILS &rarr; -->
+            </div>
+
+            <!-- item 2 -->
+            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
+                <p class="text-xl font-bold mb-2">Website Design</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
+                </p>
+                <!-- put a button here saying VIEW DETAILS &rarr; -->
+            </div>
+
+            <!-- item 3 -->
+            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
+                <h1 class="text-xl font-bold mb-2">Website Design</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
+                </p>
+                <!-- put a button here saying VIEW DETAILS &rarr; -->
+            </div>            
+
+        </div>
+    </section>
+
+    <!-- portfolio section -->
+     <section class="py-8 w-full h-full space-y-4">
+        <!-- title  -->
+        <div class="items-center lg:items-start font-semibold px-8 lg:px-28">
+            <h1 class="text-center lg:text-start">OUR PORTFOLIO</h1>
+        </div>
+        <!-- flex group 1 -->
+        <div class="flex flex-col lg:flex-row px-8 md:px-28 lg:justify-between">
+            <!-- left item -->
+            <div class="font-bold text-3xl">
+                <h1>Recent projects we have worked on</h1>   
+            </div>
+                
+            <!-- right item -->
+            <div class="lg:space-y-6">
+                <h1 class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis, rerum inventore exercitationem magni maxime.</h1>
+                <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View More Projects &rarr;</a>
+            </div>
+        </div>
+
+        <!-- flex group 2 -->
+         <div class="flex flex-col lg:flex-row px-8 lg:px-28 lg:space-x-4 space-y-8 pt-6 items-center">
+            <!-- item 1 -->
+            <div class="flex-col space-y-4 text-start p-2">
+                <div class="">
+                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
+                </div>
+                <div class="text-start mb-3">
+                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
+                </div>
+                <div>
+                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="flex-col space-y-4 text-start p-2">
+                <div class="">
+                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
+                </div>
+                <div class="text-start mb-3">
+                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
+                </div>
+                <div>
+                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="flex-col space-y-4 text-start p-2">
+                <div class="">
+                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
+                </div>
+                <div class="text-start mb-3">
+                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
+                </div>
+                <div>
+                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
+                </div>
+            </div>
+         </div>
+
+
+
+     </section>
+
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+</body>
+</html>
