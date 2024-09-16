@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-white to-green-800">
+<body class="min-h-screen bg-teal-900 h-full w-full relative">
+    <!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#427C52_1px,transparent_1px),linear-gradient(to_bottom,#427C52_1px,transparent_1px)] bg-[size:34px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> -->
 
     <!-- navbar -->
     <section class="items-center mx-auto p-4 top-0 z-10 sticky"> 
-        <nav class="bg-white md:mx-20 border border-solid border-black md:border-black md:bg-green-800 rounded-3xl">
+        <nav class="bg-white md:mx-20 border border-solid border-green-800 md:border-green-800 rounded-3xl shadow-[#00000012_0px_1px_2px,#00000012_0px_2px_4px,#00000012_0px_4px_8px,#00000012_0px_8px_16px,#00000012_0px_16px_32px,#00000012_0px_32px_64px]">
             <!-- Flex column -->
              <div class="flex items-center justify-between ">
                 <!-- Logo -->
@@ -20,16 +21,16 @@
                     <h1 class="text-3xl"></h1>
                  </div>
                  <!-- Menu items -->
-                <div class="hidden space-x-6 lg:flex text-white">
+                <div class="hidden space-x-6 lg:flex text-black">
                     <a href="#home" class="hover:font-bold">Home</a>
                     <a href="#about" class="hover:font-bold">About Us</a>
-                    <a href="#pricing" class="hover:font-bold">Pricing</a>
-                    <a href="#Blog" class="hover:font-bold">Blog</a>
-                    <a href="#testimonials" class="hover:font-bold">Client-testimonials</a>
+                    <a href="#service" class="hover:font-bold">Services</a>
+                    <a href="#team" class="hover:font-bold">Team</a>
+                    <a href="#faq" class="hover:font-bold">FAQ</a>
                     <a href="#contact" class="hover:font-bold">Contact Us</a>
                 </div>
                 <!-- button -->
-                <button class="hidden group relative lg:inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-black font-medium text-white transition-all duration-300 hover:w-32 border border-solid border-black"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Get Started</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
+                <button class="hidden group relative lg:inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-yellow-500 font-medium text-black transition-all duration-300 hover:w-32 border border-solid border-black"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Get Started</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
     
                 <!-- Harmburger Icon -->
                  <button id="menu-btn" class="cursor-pointer text-4xl font-bold focus:outline-none lg:hidden p-3">
@@ -41,153 +42,340 @@
 
     <!-- hero section -->
      <!-- h-full w-full bg-white relative -->
-    <section id="home" class="scroll-mt-10 py-6 h-full w-full relative">
+    <section id="home" class="py-3 h-full w-full relative text-white">
 
-        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:44px_54px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-
-        <div class="text-center items-center space-y-3 py-16 md:px-10 px-5">
-            <h1>TANZANIA'S LEADING WELLNESS ORGANIZATION</h1>
+        <div class="text-center items-center space-y-3 py-6 md:px-10 px-5">
+            <h1 class="text-5xl font-bold items-center text-white">INTERCONTINENTAL WELL-BEING SERVICES LTD</h1>
 
             <div class="space-y-5 md:px-24">
-                <h1 class="md:text-6xl text-5xl font-bold">Building high quality, affordable and innovative wellness solutions to cooperate clients.</h1>
-                <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem, atque iusto amet impedit dolorem expedita voluptates molestias vero totam ad veniam distinctio iure et deleniti eum. Ut, aut!</h1>
+                <h1 class="text-lg text-white">
+                    The IWS is social enterprising company based in Tanzania, Dar-es-salaam that offers high-quality, affordable, and comprehensivee wellness services to cooperate clients and their ecosystem.
+                </h1>
 
                 <!-- button -->
                 <div class="md:pt-5 pt-3">
-                    <button class="relative z-0 h-12 rounded-full bg-black px-6 text-white after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-black hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">BOOK A FREE CONSULTATION &rarr;</button>
+                    <button class="relative z-0 h-12 rounded-full bg-yellow-500 px-6 text-black after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-yellow-500 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">BOOK CONSULTATION &rarr;</button>
                 </div>
             </div>              
         </div>
 
-        <div class="md:px-32 py-2 px-5">
-            <img src="img/features-img.jpg" class="w-90 rounded-3xl transform transition-all hover:scale-x-110 shadow-[#00000059_0px_5px_15px] duration-500" alt="">
+        <div class="md:px-32 py-2 px-6 justify-center items-center">
+            <img src="img/image.jpg" class="w-90 rounded-3xl transform transition-all hover:scale-x-110 shadow-[#00000059_0px_5px_15px] duration-500" alt="">
         </div>
     </section>
 
     <!-- companies section -->
     <section class="py-10 h-full w-full relative">
-        <div class="space-y-6 items-center text-center px-6">
-            <h1 class="font-semibold">TRUSTED BY WORLD LEADING START-UPS AND COMPANIES</h1>
+        <div class="space-y-6 items-center text-center px-6 md:px-24 justify-between text-white">
+            <h1 class="font-semibold">OUR CLIENTS</h1>
 
             <!-- companies logos -->
-            <div class="flex flex-row space-x-16 justify-center md:justify-between md:px-28">
-                <img src="img/favicon-1.png" width="50" height="50" alt="">
-                <img src="img/favicon-1.png" width="50" height="50" alt="">
-                <img src="img/favicon-1.png" width="50" height="50" alt="">
+            <div class="flex flex-row space-x-8 justify-center md:justify-between px-3 md:px-28 bg-white rounded-xl py-2 shadow-[#32325d40_0px_30px_60px_-12px_inset,#00000040_0px_18px_36px_-18px_inset]">
+                <img src="img/companies/1.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
+                <img src="img/companies/2.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
+                <img src="img/companies/3.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
+                <img src="img/companies/4.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300"> 
+                <img src="img/companies/5.png" width="50" height="50" alt="" class="hidden sm:block transform transition-all hover:scale-110 duration-300">
+                <img src="img/companies/6.png" width="50" height="50" alt="" class="hidden sm:block transform transition-all hover:scale-110 duration-300">
+                <!-- <img src="img/companies/2.jpeg" width="50" height="50" alt="" class="hidden sm:block"> -->
             </div>
 
             <!-- put a button here that says MORE to see more companies -->
         </div>
     </section>
 
-    <!-- services section -->
-    <section class="py-8 w-full relative space-y-6">
-        <div class="grid space-y-4 text-center lg:text-start px-6 md:px-28">
-            <h1 class="font-semibold">WHAT WE OFFER</h1>
-            <h1 class="font-bold text-3xl">We offer a wide range of services</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quaerat quisquam dicta aut dolorem maiores placeat alias corrupti officiis dignissimos.</p>
+    <!-- about us -->
+    <section id="about" class="relative scroll-mt-20 items bg-center py-16 space-y-6">
+
+        <!-- title -->
+        <div class="flex justify-center items-center mx-auto py-2">
+            <h1 class="text-5xl font-bold items-center text-white">About Us</h1>
+            <hr>
         </div>
+        <!-- Flex Container -->
+        <div class="container flex flex-col-reverse items-center px-6 md:px-6 mx-auto md:space-y-0 md:flex-row">
 
-        <div class="flex flex-col lg:flex-row justify-center px-6 md:px-28 lg:space-x-4">
-            <!-- item 1 -->
-            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500"> 
-                <p class="text-xl font-bold mb-2">Website Design</p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
-                </p>
-                <!-- put a button here saying VIEW DETAILS &rarr; -->
+             <!-- image item -->  
+            <div class="px-3">
+                <img src="img/wellness1.PNG" alt="" class="md:w-90 md:mt-12 md:mb-6 rounded-xl transform transition-all hover:scale-110 mb-8">
+
+                <div class="flex flex-col md:flex-row space-x-3 mb-8 md:mb-0 border border-solid rounded-lg border-white justify-between bg-white">
+                    <!-- Mission/Vision/Values section -->
+                    <!-- Vision -->
+                    <div class="items-center justify-center mx-auto space-y-2 text-center p-3 hover:bg-yellow-400 rounded-lg duration-300 text-black">   
+                        <img src="img/vision.png" alt="" class="w-20 items-center mx-auto" />
+                      <h1 class="text-xl font-bold">Our Vision</h1>
+                      <hr>
+                      <p class="text-start">To become the Globe's most prestigious wellness company by 2040</p>
+                    </div>
+              
+                    <!-- mission -->
+                    <div class="items-center space-y-2 text-center p-3 hover:bg-red-400 rounded-lg duration-300 text-black">
+                      <img src="img/mision.png" alt="" class="w-1/4 items-center mx-auto" />
+                      <h1 class="text-xl font-bold">Our Mission</h1>
+                      <hr>
+                      <p class="text-start">Our mission is to foster a productive workforce, quality of personal and work life and boost both national and global economy.</p>
+                    </div>
+              
+                    <!-- values -->
+                    <div class="items-center space-y-2 text-center p-3 hover:bg-indigo-400 rounded-lg duration-300 text-black">
+                      <img src="img/values.png" alt="" class="w-1/4 items-center mx-auto" />
+                      <h1 class="text-xl font-bold">Our Values</h1>
+                      <hr>
+                      <p class="text-start ">With our customer-centered approach and operational excellence, we conduct our business with a human element, with zero tolerance for the infringement of human rights.</p>
+                    </div>
+
+                    <!-- Objective -->
+                    <div class="items-center space-y-2 text-center p-3 hover:bg-indigo-400 rounded-lg duration-300 text-black">
+                        <img src="img/objective.png" alt="" class="w-1/4 items-center mx-auto" />
+                        <h1 class="text-xl font-bold">Our Objective</h1>
+                        <hr>
+                        <p class="text-start">
+                            To contribute to improving health outcomes, reducing health costs, increasing productivity hence complement the government's efforts towards the Health Sector Strategic Plan, July 2021 - June 2026 and the Sustainable Development Goal 3 (SDG 3).
+                        </p>
+                    </div>
+            
+                </div>
             </div>
-
-            <!-- item 2 -->
-            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
-                <p class="text-xl font-bold mb-2">Website Design</p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
-                </p>
-                <!-- put a button here saying VIEW DETAILS &rarr; -->
-            </div>
-
-            <!-- item 3 -->
-            <div class="flex-col space-x-6 bg-gray-300 p-5 rounded-xl text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
-                <h1 class="text-xl font-bold mb-2">Website Design</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor sapiente quo fuga dicta eius debitis cumque eveniet eaque omnis non, quae reprehenderit ipsum possimus porro earum dignissimos magni saepe!
-                </p>
-                <!-- put a button here saying VIEW DETAILS &rarr; -->
-            </div>            
-
         </div>
     </section>
 
-    <!-- portfolio section -->
-     <section class="py-8 w-full h-full space-y-4">
-        <!-- title  -->
-        <div class="items-center lg:items-start font-semibold px-8 lg:px-28">
-            <h1 class="text-center lg:text-start">OUR PORTFOLIO</h1>
-        </div>
-        <!-- flex group 1 -->
-        <div class="flex flex-col lg:flex-row px-8 md:px-28 lg:justify-between">
-            <!-- left item -->
-            <div class="font-bold text-3xl">
-                <h1>Recent projects we have worked on</h1>   
-            </div>
-                
-            <!-- right item -->
-            <div class="lg:space-y-6">
-                <h1 class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis, rerum inventore exercitationem magni maxime.</h1>
-                <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View More Projects &rarr;</a>
-            </div>
+    <!-- services section -->
+    <section id="service" class="py-8 w-full relative space-y-6 bg-white shadow-[0_0_10px_0_#00000073_inset]">
+        <div class="grid space-y-4 text-center lg:text-start px-6 md:px-28">
+            <h1 class="font-bold mb-2 text-green-800 text-3xl">OUR SERVICES</h1>
+            <hr>
+            <!-- <h1 class="font-bold text-3xl text-green-800">We offer a wide range of services</h1> -->
+            <p class="text-green-950">We offer comprehensive wellness Consultancies in fostering a workplace culture of wellness to increase the productivity and welfare of the employees, specifically in the following key areas.</p>
         </div>
 
-        <!-- flex group 2 -->
-         <div class="flex flex-col lg:flex-row px-8 lg:px-28 lg:space-x-4 space-y-8 pt-6 items-center">
+        <div class="flex flex-col lg:flex-row justify-center text-white">
             <!-- item 1 -->
-            <div class="flex-col space-y-4 text-start p-2">
-                <div class="">
-                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
-                </div>
-                <div class="text-start mb-3">
-                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
-                </div>
-                <div>
-                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
-                </div>
+            <div class="flex-col space-x-6 bg-teal-900 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500"> 
+                <p class="text-xl font-bold mb-2">Managerial Consultation</p>
+                <p class="mb-2">
+                    Managerial Consultation psycho socio issues ranging from stress management, crisis
+                    management, assistance in managing risk cases, cultural diversity, or performance
+                    management of employees, and review of policies to ensure a conducive legal framework
+                    to promote the well-being of employees and the company.
+                </p>
+                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#3b82f6]">VIEW DETAILS &rarr;</button>
             </div>
 
             <!-- item 2 -->
-            <div class="flex-col space-y-4 text-start p-2">
-                <div class="">
-                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
-                </div>
-                <div class="text-start mb-3">
-                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
-                </div>
-                <div>
-                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
-                </div>
+            <div class="flex-col space-x-6 bg-amber-600 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
+                <p class="text-xl font-bold mb-2">Emergency Response</p>
+                <p class="mb-2">
+                    Emergency Response Critical Incident Stress Debriefing (CISD) Worksite Counseling
+                    and Stress Management Support in times of emergency such as the death of a colleague
+                    or disaster at a worksite.
+                </p>
+                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#3bf6a8]">VIEW DETAILS &rarr;</button>
+
             </div>
 
             <!-- item 3 -->
-            <div class="flex-col space-y-4 text-start p-2">
-                <div class="">
-                    <img src="img/book.PNG" class="rounded-t-2xl" alt="">
-                </div>
-                <div class="text-start mb-3">
-                    <h1 class="mb-2 font-semibold">GOOGLE MY BUSINESS APP</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, excepturi!</p>
-                </div>
-                <div>
-                    <a href="#" class="px-4 py-2 bg-black text-white rounded-lg lg:text-center">View Project &rarr;</a>
-                </div>
-            </div>
-         </div>
+            <div class="flex-col space-x-6 bg-green-500 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
+                <h1 class="text-xl font-bold mb-2">Professional Telephone Counselling</h1>
+                <p class="mb-2">
+                    Professional Telephone Counselling in two languages, both Swahili and English -
+                    Counselling for marital and parenting-related psychosocial problems, substance abuse
+                    and addiction, relationship problems, financial management, health, personal, or
+                    work-related problems, and all mental disorders.
+                </p>
+                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#f3f63b]">VIEW DETAILS &rarr;</button>
+            </div>            
+        </div>   
+        <div class="justify-center px-6 md:px-28 lg:space-x-4">
+            <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-green-800 px-6 font-medium text-neutral-200"><span>MORE SERVICES</span><div class="ml-1 transition duration-300 group-hover:rotate-[360deg]"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
+        </div>
+    </section>
 
+    <!-- team section -->
+     <section id="team" class="py-8 w-full h-full space-y-4 px-8 bg-teal-900">
+        <!-- title  -->
+        <div class="items-center lg:items-start font-semibold px-8 lg:px-20">
+            
+        </div>
+        <!-- flex group 1 -->
+        <div class="flex flex-col lg:flex-row px-4 md:px-24 lg:justify-center text-white">
+            <!-- left item -->
+            <div class="font-bold text-3xl">
+                <!-- <h1 class="text-center lg:text-center text-white text-lg">MEET</h1> -->
+                <h1 class="text-center">Our Team.</h1>   
+            </div>
+        </div>
+
+        <div class="px-0 md:px-16 justify-center">
+            <!-- flex group 2 -->
+            <div class="flex flex-col md:flex-row px-4 md:px-12 md:justify-center md:space-x-0 pt-6 items-center border border-solid border-white rounded-3xl shadow-[#00000066_0px_2px_4px,#0000004d_0px_7px_13px_-3px,#00000033_0px_-3px_0px_inset]">
+                <h1 class="mb-4 text-lg text-white text-center">We have a pool of outstanding and multi-disciplinary team of experienced experts from renowned colleges & universities both in Tanzania and beyond to cater to both tailor-made and customer-made clients' needs.</h1>
+
+            </div>
+        </div>
 
 
      </section>
 
-    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+     <!-- frequently asked questions -->
+    <section id="faq" class="justify-center items-center p-6 bg-white py-8">
+        <!-- first flex item -->
+         <div class="flex justify-center items-center md:justify-center lg:items-center lg:text-center px-8">
+            <div class="flex-row text-center lg:items-center justify-items-center px-8 space-y-6">
+                <!-- <h1 class="text-center lg:text-center text-green-900 font-bold">FREQUENTLY ASKED QUESTIONS</h1> -->
+                <h2 class="font-bold text-2xl text-center">Frequently Asked Questions.</h2>
+
+                <!-- button -->
+                <!-- <button class="relative z-0 h-12 rounded-full bg-teal-900 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-teal-900 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500 animate-bounce"><a href="#">Frequently Asked Questions</a></button> -->
+
+                <div class="flex-col mx-auto items-center">
+                    <!-- faq 1 -->
+                    <div class="space-y-4 text-start mt-6" >
+                        <h1 class="text-xl font-bold">What is Wellness?</h1>
+                        <p class="text-sm">
+                            Wellness signifies holistic well-being, encompassing an individual's mental, emotional, physical, occupational, intellectual, and spiritual dimensions. Each facet of wellness significantly impacts the overall quality of life, underscoring the importance of comprehensive consideration. In the absence of well-being, mental health disorders prevail, impeding human emotions, cognition, and behavior, thereby diminishing cognitive daily functioning. Consequently, wellness services address the complete spectrum of emotional, mental, physical, spiritual, environmental, occupational, cultural, and religious well-being, empowering individuals to lead purposeful and productive lives.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- faq 2 -->
+                    <div class="space-y-4 text-start mt-6" >
+                        <h1 class="text-xl font-bold">Do you also have programs for children as well?</h1>
+                        <p class="text-sm">
+                            Yes! we have designed a program
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- faq 3 -->
+                    <div class="space-y-4 text-start mt-6" >
+                        <h1 class="text-xl font-bold">Why Wellness Services?</h1>
+                        <p class="text-sm">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum quo beatae repudiandae sed eius quis eos deserunt aliquam ex nam?
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-14">
+        <div class="px-16 space-y-12">
+            <!-- item 1 -->
+             <div class="space-x-3 flex flex-row">
+                <div>
+                    <img src="img/favicon-1.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="35" height="35">
+                </div>
+                <div class="">
+                    <h1 class="text-white text-3xl">Wellness is wealth, invest in it.</h1>
+                    <h1 class="mt-2">
+                        <hr>
+                    </h1>
+                </div>
+             </div>
+
+            <!-- item 2 -->
+             <div class="flex flex-col md:flex-row md:space-x-16 space-y-8 md:space-y-0 px-16 text-center md:text-start">
+                <!-- company -->
+                <div class="flex-col space-y-3 text-white">
+                    <h1 class="text-2xl mb-2">Company</h1>
+                    <ul class="space-y-2">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="flex-col space-y-3 text-white">
+                    <h1 class="text-2xl mb-2">Quick Links</h1>
+                    <ul class="space-y-2">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+
+                <!-- For you -->
+                <div class="flex-col space-y-3 text-white">
+                    <h1 class="text-2xl mb-2">For You</h1>
+                    <ul class="space-y-2">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="flex-col space-y-3 text-white">
+                    <h1 class="text-2xl mb-2">Contact Details</h1>
+                    <ul class="space-y-6 text-lg">
+                        <div class="flex flex-row mx-auto space-x-2">
+                            <div>
+                                <img src="img/location-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
+                            </div>
+                            <div>
+                                <li><a href="#about">65, Philemon Road/Rafiki Road.
+                                    P.O.Box 8545 Kunduchi/Bahari Beach - Dar-es-salaam</a></li>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row mx-auto space-x-2">
+                            <div>
+                                <img src="img/emial-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
+                            </div>
+                            <div>
+                                <li><a href="mailto:">bahati@iwslimited.co.tz Cc bahatimandago@gmail.com</a></li>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row mx-auto space-x-2">
+                            <div>
+                                <img src="img/phone-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
+                            </div>
+                            <div>
+                                <li><a href="#about">+255 753 535 658 / +255 745 700 081</a></li>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row mx-auto space-x-2">
+                            <div>
+                                <img src="img/whatsapp-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
+                            </div>
+                            <div>
+                                <li><a href="https://wa.link/yweaub">Whatsapp Us</a></li>
+                            </div>
+                        </div>
+                        
+                        
+                    </ul>
+                </div>
+             </div>
+
+            <!-- item 3 -->
+            <div class="flex flex-row justify-between text-white text-center">
+                <div>
+                    @Copyright. <span class="font-bold">Intercontinental Wellness Services.Ltd</span>. All rights Reserved.
+                </div>
+                <div class="flex flex-row space-x-4">
+                    <div>
+                        <a href="https://www.instagram.com/iwslimitedtz/"><img src="img/instagram-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/company/iwslimitedtz/"><img src="img/linkedin.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/iwslimitedtz"><img src="img/facebook-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
