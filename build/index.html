@@ -17,7 +17,7 @@
              <div class="flex items-center justify-between ">
                 <!-- Logo -->
                  <div class="pt-2 p-2 flex flex-row space-x-3">
-                    <img src="img/favicon-2.PNG" alt="" class="transform transition-all hover:scale-y-110 hover:shadow-2xl duration-300" width="160" height="160">
+                    <img src="img/favicon-1.png" alt="" class="transform transition-all hover:scale-y-110 hover:shadow-2xl duration-300" width="140" height="140">
                     <h1 class="text-3xl"></h1>
                  </div>
                  <!-- Menu items -->
@@ -30,11 +30,44 @@
                     <a href="#contact" class="hover:font-bold">Contact Us</a>
                 </div>
                 <!-- button -->
-                <button class="hidden group relative lg:inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-yellow-500 font-medium text-black transition-all duration-300 hover:w-32 border border-solid border-black"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">Get Started</div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
+                <button class="hidden group relative lg:inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-yellow-500 font-medium text-black transition-all duration-300 hover:w-32 border border-solid border-black"><div class="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100"><a href="https://wa.link/yweaub">Get Started</a></div><div class="absolute right-3.5"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
     
                 <!-- Harmburger Icon -->
                  <button id="menu-btn" class="cursor-pointer text-4xl font-bold focus:outline-none lg:hidden p-3">
-                    &#9776;
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <div id="mobile-menu" class="hidden absolute top-full right-0 w-48 bg-white mt-2 p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out opacity-0 transform scale-95">
+                        <a href="#home" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">Home</a>
+                        <a href="#about" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">About Us</a>
+                        <a href="#service" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">Services</a>
+                        <a href="#team" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">Team</a>
+                        <a href="#faq" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">FAQ</a>
+                        <a href="#contact" class="block py-2 text-sm text-gray-700 hover:text-teal-600 transition-colors duration-200">Contact Us</a>
+                    </div>
+                    <script>
+                        const menuBtn = document.getElementById('menu-btn');
+                        const mobileMenu = document.getElementById('mobile-menu');
+
+                        function toggleMenu() {
+                            mobileMenu.classList.toggle('hidden');
+                            setTimeout(() => {
+                                mobileMenu.classList.toggle('opacity-0');
+                                mobileMenu.classList.toggle('scale-95');
+                            }, 10);
+                        }
+
+                        menuBtn.addEventListener('click', function(event) {
+                            event.stopPropagation();
+                            toggleMenu();
+                        });
+
+                        document.addEventListener('click', function(event) {
+                            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                                mobileMenu.classList.add('hidden', 'opacity-0', 'scale-95');
+                            }
+                        });
+                    </script>
                  </button>
             </div>
         </nav>
@@ -54,324 +87,599 @@
 
                 <!-- button -->
                 <div class="md:pt-5 pt-3">
-                    <button class="relative z-0 h-12 rounded-full bg-yellow-500 px-6 text-black after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-yellow-500 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">BOOK CONSULTATION &rarr;</button>
+                    <button class="relative z-0 h-12 rounded-full bg-yellow-500 px-6 text-black after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-yellow-500 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500"><a href="https://wa.link/yweaub">BOOK OUR SERVICES &rarr;</a></button>
                 </div>
             </div>              
         </div>
 
         <div class="md:px-32 py-2 px-6 justify-center items-center">
-            <img src="img/image.jpg" class="w-90 rounded-3xl transform transition-all hover:scale-x-110 shadow-[#00000059_0px_5px_15px] duration-500" alt="">
+            <img src="img/features-img.jpg" class="w-90 rounded-3xl transform transition-all hover:scale-x-110 shadow-[#00000059_0px_5px_15px] duration-500" alt="">
         </div>
     </section>
 
     <!-- companies section -->
-    <section class="py-10 h-full w-full relative">
-        <div class="space-y-6 items-center text-center px-6 md:px-24 justify-between text-white">
-            <h1 class="font-semibold">OUR CLIENTS</h1>
-
-            <!-- companies logos -->
-            <div class="flex flex-row space-x-8 justify-center md:justify-between px-3 md:px-28 bg-white rounded-xl py-2 shadow-[#32325d40_0px_30px_60px_-12px_inset,#00000040_0px_18px_36px_-18px_inset]">
-                <img src="img/companies/1.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
-                <img src="img/companies/2.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
-                <img src="img/companies/3.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300">
-                <img src="img/companies/4.png" width="50" height="50" alt="" class="transform transition-all hover:scale-110 duration-300"> 
-                <img src="img/companies/5.png" width="50" height="50" alt="" class="hidden sm:block transform transition-all hover:scale-110 duration-300">
-                <img src="img/companies/6.png" width="50" height="50" alt="" class="hidden sm:block transform transition-all hover:scale-110 duration-300">
-                <!-- <img src="img/companies/2.jpeg" width="50" height="50" alt="" class="hidden sm:block"> -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-teal-900 mb-8">Our Clients</h2>
+            <div class="relative overflow-hidden" id="clientsSlider">
+                <div class="flex transition-transform duration-500 ease-in-out" id="clientsTrack">
+                    <!-- Company logos will be dynamically inserted here -->
+                </div>
             </div>
-
-            <!-- put a button here that says MORE to see more companies -->
         </div>
     </section>
 
+    <script>
+        const companies = [
+            { src: "img/companies/1.jpeg", alt: "Company 1" },
+            { src: "img/companies/2.png", alt: "Company 2" },
+            { src: "img/companies/3.png", alt: "Company 3" },
+            { src: "img/companies/4.png", alt: "Company 4" },
+            { src: "img/companies/5.png", alt: "Company 5" },
+            { src: "img/companies/6.png", alt: "Company 6" },
+            // Add more companies as needed
+        ];
+
+        const clientsTrack = document.getElementById('clientsTrack');
+        const totalWidth = companies.length * 200; // Assuming each logo is about 200px wide
+
+        // Duplicate the companies array to create a seamless loop
+        const allCompanies = [...companies, ...companies];
+
+        // Populate the slider with company logos
+        allCompanies.forEach(company => {
+            const img = document.createElement('img');
+            img.src = company.src;
+            img.alt = company.alt;
+            img.className = 'w-40 h-auto mx-8 object-contain filter grayscale hover:grayscale-0 transition-all duration-300';
+            clientsTrack.appendChild(img);
+        });
+
+        // Set the width of the track
+        clientsTrack.style.width = `${totalWidth * 2}px`; // Double width for the duplicated set
+
+        let position = 0;
+        const speed = 0.5; // Pixels per frame
+
+        function slide() {
+            position -= speed;
+            if (position <= -totalWidth) {
+                position = 0;
+            }
+            clientsTrack.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(slide);
+        }
+
+        slide(); // Start the animation
+
+        // Pause animation on hover
+        const slider = document.getElementById('clientsSlider');
+        slider.addEventListener('mouseenter', () => clientsTrack.style.animationPlayState = 'paused');
+        slider.addEventListener('mouseleave', () => clientsTrack.style.animationPlayState = 'running');
+    </script>
+
     <!-- about us -->
-    <section id="about" class="relative scroll-mt-20 items bg-center py-16 space-y-6">
-
+    <section id="about" class="relative scroll-mt-20 bg-center py-20 space-y-8 bg-teal-900">
         <!-- title -->
-        <div class="flex justify-center items-center mx-auto py-2">
-            <h1 class="text-5xl font-bold items-center text-white">About Us</h1>
-            <hr>
+        <div class="flex justify-center items-center mx-auto">
+            <h1 class="text-5xl font-bold text-white mb-4">About Us</h1>
         </div>
+        <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+
         <!-- Flex Container -->
-        <div class="container flex flex-col-reverse items-center px-6 md:px-6 mx-auto md:space-y-0 md:flex-row">
+        <div class="container flex flex-col-reverse items-center px-6 mx-auto space-y-10 md:space-y-0 md:flex-row md:space-x-12">
+            <!-- image item -->  
+            <div class="flex-1 mt-10 md:mt-0">
+                <img src="img/services-1.jpeg" alt="" class="w-full rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105">
 
-             <!-- image item -->  
-            <div class="px-3">
-                <img src="img/wellness1.PNG" alt="" class="md:w-90 md:mt-12 md:mb-6 rounded-xl transform transition-all hover:scale-110 mb-8">
-
-                <div class="flex flex-col md:flex-row space-x-3 mb-8 md:mb-0 border border-solid rounded-lg border-white justify-between bg-white">
+                <div class="flex flex-col md:flex-row md:space-x-4 mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
                     <!-- Mission/Vision/Values section -->
                     <!-- Vision -->
-                    <div class="items-center justify-center mx-auto space-y-2 text-center p-3 hover:bg-yellow-400 rounded-lg duration-300 text-black">   
-                        <img src="img/vision.png" alt="" class="w-20 items-center mx-auto" />
-                      <h1 class="text-xl font-bold">Our Vision</h1>
-                      <hr>
-                      <p class="text-start">To become the Globe's most prestigious wellness company by 2040</p>
+                    <div class="flex-1 p-6 hover:bg-yellow-400 transition-colors duration-300">   
+                        <img src="img/vision.png" alt="" class="w-20 mx-auto mb-4" />
+                        <h2 class="text-xl font-bold mb-2 text-center">Our Vision</h2>
+                        <hr class="w-16 border-t-2 border-teal-600 mx-auto mb-4">
+                        <p class="text-sm text-gray-700">To become the Globe's most prestigious wellness company by 2040</p>
                     </div>
               
                     <!-- mission -->
-                    <div class="items-center space-y-2 text-center p-3 hover:bg-red-400 rounded-lg duration-300 text-black">
-                      <img src="img/mision.png" alt="" class="w-1/4 items-center mx-auto" />
-                      <h1 class="text-xl font-bold">Our Mission</h1>
-                      <hr>
-                      <p class="text-start">Our mission is to foster a productive workforce, quality of personal and work life and boost both national and global economy.</p>
+                    <div class="flex-1 p-6 hover:bg-red-400 transition-colors duration-300">
+                        <img src="img/mision.png" alt="" class="w-20 mx-auto mb-4" />
+                        <h2 class="text-xl font-bold mb-2 text-center">Our Mission</h2>
+                        <hr class="w-16 border-t-2 border-teal-600 mx-auto mb-4">
+                        <p class="text-sm text-gray-700">Our mission is to foster a productive workforce, quality of personal and work life and boost both national and global economy.</p>
                     </div>
               
                     <!-- values -->
-                    <div class="items-center space-y-2 text-center p-3 hover:bg-indigo-400 rounded-lg duration-300 text-black">
-                      <img src="img/values.png" alt="" class="w-1/4 items-center mx-auto" />
-                      <h1 class="text-xl font-bold">Our Values</h1>
-                      <hr>
-                      <p class="text-start ">With our customer-centered approach and operational excellence, we conduct our business with a human element, with zero tolerance for the infringement of human rights.</p>
+                    <div class="flex-1 p-6 hover:bg-indigo-400 transition-colors duration-300">
+                        <img src="img/values.png" alt="" class="w-20 mx-auto mb-4" />
+                        <h2 class="text-xl font-bold mb-2 text-center">Our Values</h2>
+                        <hr class="w-16 border-t-2 border-teal-600 mx-auto mb-4">
+                        <p class="text-sm text-gray-700">With our customer-centered approach and operational excellence, we conduct our business with a human element, with zero tolerance for the infringement of human rights.</p>
                     </div>
 
                     <!-- Objective -->
-                    <div class="items-center space-y-2 text-center p-3 hover:bg-indigo-400 rounded-lg duration-300 text-black">
-                        <img src="img/objective.png" alt="" class="w-1/4 items-center mx-auto" />
-                        <h1 class="text-xl font-bold">Our Objective</h1>
-                        <hr>
-                        <p class="text-start">
+                    <div class="flex-1 p-6 hover:bg-pink-400 transition-colors duration-300">
+                        <img src="img/objective.png" alt="" class="w-20 mx-auto mb-4" />
+                        <h2 class="text-xl font-bold mb-2 text-center">Our Objective</h2>
+                        <hr class="w-16 border-t-2 border-teal-600 mx-auto mb-4">
+                        <p class="text-sm text-gray-700">
                             To contribute to improving health outcomes, reducing health costs, increasing productivity hence complement the government's efforts towards the Health Sector Strategic Plan, July 2021 - June 2026 and the Sustainable Development Goal 3 (SDG 3).
                         </p>
                     </div>
-            
                 </div>
             </div>
         </div>
     </section>
 
     <!-- services section -->
-    <section id="service" class="py-8 w-full relative space-y-6 bg-white shadow-[0_0_10px_0_#00000073_inset]">
-        <div class="grid space-y-4 text-center lg:text-start px-6 md:px-28">
-            <h1 class="font-bold mb-2 text-green-800 text-3xl">OUR SERVICES</h1>
-            <hr>
-            <!-- <h1 class="font-bold text-3xl text-green-800">We offer a wide range of services</h1> -->
-            <p class="text-green-950">We offer comprehensive wellness Consultancies in fostering a workplace culture of wellness to increase the productivity and welfare of the employees, specifically in the following key areas.</p>
+    <section id="service" class="py-16 w-full relative bg-white shadow-[0_0_10px_0_#00000073_inset]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-green-800">OUR SERVICES</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
+                <p class="text-green-950 max-w-3xl mx-auto">
+                    We offer comprehensive wellness Consultancies in fostering a workplace culture of wellness to increase the productivity and welfare of the employees, specifically in the following key areas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Managerial Consultation -->
+                <div class="bg-teal-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Managerial Consultation</h3>
+                        <p class="mb-6 text-sm">
+                            Managerial Consultation psycho socio issues ranging from stress management, crisis
+                            management, assistance in managing risk cases, cultural diversity, or performance
+                            management of employees, and review of policies to ensure a conducive legal framework
+                            to promote the well-being of employees and the company.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Emergency Response -->
+                <div class="bg-amber-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Emergency Response</h3>
+                        <p class="mb-6 text-sm">
+                            Emergency Response Critical Incident Stress Debriefing (CISD) Worksite Counseling
+                            and Stress Management Support in times of emergency such as the death of a colleague
+                            or disaster at a worksite.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Professional Telephone Counselling -->
+                <div class="bg-green-500 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Professional Telephone Counselling</h3>
+                        <p class="mb-6 text-sm">
+                            Professional Telephone Counselling in two languages, both Swahili and English -
+                            Counselling for marital and parenting-related psychosocial problems, substance abuse
+                            and addiction, relationship problems, financial management, health, personal, or
+                            work-related problems, and all mental disorders.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wellness Programs -->
+                <div class="bg-blue-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Professional Face-to-Face Counselling</h3>
+                        <p class="mb-6 text-sm">
+                            For any psychological, relationship, medical, stress, adolescent counseling, family therapy, individual and corporate coaching financial problem, marital & pre-natal counseling, trauma-focused counseling, , fitness, nutrition, and lifestyle management.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Executive Coaching -->
+                <div class="bg-purple-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Education Support and Awareness</h3>
+                        <p class="mb-6 text-sm">
+                            Conduct awareness programs across the network to equip employees on key psychological threats/signs periodically.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Team Building Workshops -->
+                <div class="bg-red-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Arrangements for Home-Based Care Services</h3>
+                        <p class="mb-6 text-sm">
+                            Support of home health services where needed.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ergonomic Assessments -->
+                <div class="bg-indigo-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Physical wellness</h3>
+                        <p class="mb-6 text-sm">
+                            Support physical wellness that encourages the balance of physical activity, nutrition, good sleep, and mental well-being.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Financial Wellness Education -->
+                <div class="bg-yellow-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Wellness Days</h3>
+                        <p class="mb-6 text-sm">
+                            Support in conducting annual wellness days across the network that help to keep employees well educated in various health issues etc.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Work-Life Balance Consulting -->
+                <div class="bg-pink-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Psychiatric Care Arrangement</h3>
+                        <p class="mb-6 text-sm">
+                            Outpatient assessment and care through an accredited psychiatrist.
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Health and Wellness Seminars -->
+                <div class="bg-cyan-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Work-Family balance.</h3>
+                        <p class="mb-6 text-sm">
+                            <!-- empty -->
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Workplace Conflict Resolution -->
+                <div class="bg-orange-600 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">Seasonal Monitoring & evaluation as well as Report writing</h3>
+                        <p class="mb-6 text-sm">
+                            <!-- empty -->
+                        </p>
+                        <button role="link" class="relative text-neutral-950 bg-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-400 transition duration-300">
+                            VIEW DETAILS &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="flex flex-col lg:flex-row justify-center text-white">
-            <!-- item 1 -->
-            <div class="flex-col space-x-6 bg-teal-900 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500"> 
-                <p class="text-xl font-bold mb-2">Managerial Consultation</p>
-                <p class="mb-2">
-                    Managerial Consultation psycho socio issues ranging from stress management, crisis
-                    management, assistance in managing risk cases, cultural diversity, or performance
-                    management of employees, and review of policies to ensure a conducive legal framework
-                    to promote the well-being of employees and the company.
-                </p>
-                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#3b82f6]">VIEW DETAILS &rarr;</button>
+    <!-- Package Offers Section -->
+    <section id="packages" class="py-16 w-full bg-white text-teal-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 animate-fade-in-down">Our Package Offers</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
             </div>
 
-            <!-- item 2 -->
-            <div class="flex-col space-x-6 bg-amber-600 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
-                <p class="text-xl font-bold mb-2">Emergency Response</p>
-                <p class="mb-2">
-                    Emergency Response Critical Incident Stress Debriefing (CISD) Worksite Counseling
-                    and Stress Management Support in times of emergency such as the death of a colleague
-                    or disaster at a worksite.
-                </p>
-                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#3bf6a8]">VIEW DETAILS &rarr;</button>
+            <!-- Packages Container -->
+            <div class="flex flex-col lg:flex-row justify-center items-stretch space-y-8 lg:space-y-0 lg:space-x-8">
+                <!-- Corporate Package -->
+                <div class="flex-1 bg-teal-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate-fade-in">
+                    <div class="p-6 text-white">
+                        <h3 class="text-2xl font-semibold mb-2">Employees Wellness Program</h3>
+                        <p class="text-sm mb-4 text-teal-200">
+                            The overall benefit of Employees Wellness Program is the enhancement of quality of work life, and both company productivity and economy growth.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li>✓ Employee Counselling</li>
+                            <li>✓ Hygiene training</li>
+                            <li>✓ Work ethics</li>
+                            <li>✓ Regular follow ups</li>
+                        </ul>
+                        <button class="w-full bg-yellow-500 text-teal-900 font-bold py-2 px-4 rounded-full hover:bg-yellow-400 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
 
+                <!-- Business Package -->
+                <div class="flex-1 bg-teal-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate-fade-in">
+                    <div class="p-6 text-white">
+                        <h3 class="text-2xl font-semibold mb-2">Business Counseling</h3>
+                        <p class="text-sm mb-4 text-teal-200">
+                            The overall benefit of business counseling is to identify the major obstacles to business growth and scalability and provide concrete solutions, including restructurings and assistance with 
+                            obtaining neccesary resources
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li>✓ Business advice and trainings</li>
+                            <li>✓ Depression counseling</li>
+                            <li>✓ Personal challenges in the business</li>
+                            <li>✓ Regular follow ups</li>
+                        </ul>
+                        <button class="w-full bg-yellow-500 text-teal-900 font-bold py-2 px-4 rounded-full hover:bg-yellow-400 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Adolescence Package -->
+                <div class="flex-1 bg-teal-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate-fade-in">
+                    <div class="p-6 text-white">
+                        <h3 class="text-2xl font-semibold mb-2">Bridging gaps Program</h3>
+                        <p class="text-sm mb-4 text-teal-200">
+                            Bridging Gaps Programs (BGP) aim to help individuals navigate life transitions by offering programs that enhance their knowledge and skills. IWS Ltd recognizes that conflicts often stem from inadequate information and coping mechanisms during these transitions.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li>✓ Youth-focused programs</li>
+                            <li>✓ Mental health support</li>
+                            <li>✓ Life skills training</li>
+                            <li>✓ Career guidance</li>
+                        </ul>
+                        <button class="w-full bg-yellow-500 text-teal-900 font-bold py-2 px-4 rounded-full hover:bg-yellow-400 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <!-- item 3 -->
-            <div class="flex-col space-x-6 bg-green-500 p-5 text-center md:text-start mb-4 transform transition-all hover:scale-105 duration-500">
-                <h1 class="text-xl font-bold mb-2">Professional Telephone Counselling</h1>
-                <p class="mb-2">
-                    Professional Telephone Counselling in two languages, both Swahili and English -
-                    Counselling for marital and parenting-related psychosocial problems, substance abuse
-                    and addiction, relationship problems, financial management, health, personal, or
-                    work-related problems, and all mental disorders.
-                </p>
-                <button role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#f3f63b]">VIEW DETAILS &rarr;</button>
-            </div>            
-        </div>   
-        <div class="justify-center px-6 md:px-28 lg:space-x-4">
-            <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-green-800 px-6 font-medium text-neutral-200"><span>MORE SERVICES</span><div class="ml-1 transition duration-300 group-hover:rotate-[360deg]"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
         </div>
     </section>
 
     <!-- team section -->
-     <section id="team" class="py-8 w-full h-full space-y-4 px-8 bg-teal-900">
-        <!-- title  -->
-        <div class="items-center lg:items-start font-semibold px-8 lg:px-20">
-            
-        </div>
-        <!-- flex group 1 -->
-        <div class="flex flex-col lg:flex-row px-4 md:px-24 lg:justify-center text-white">
-            <!-- left item -->
-            <div class="font-bold text-3xl">
-                <!-- <h1 class="text-center lg:text-center text-white text-lg">MEET</h1> -->
-                <h1 class="text-center">Our Team.</h1>   
+    <section id="team" class="py-16 w-full bg-teal-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- title -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 animate-fade-in-down">Our Team.</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
             </div>
-        </div>
 
-        <div class="px-0 md:px-16 justify-center">
-            <!-- flex group 2 -->
-            <div class="flex flex-col md:flex-row px-4 md:px-12 md:justify-center md:space-x-0 pt-6 items-center border border-solid border-white rounded-3xl shadow-[#00000066_0px_2px_4px,#0000004d_0px_7px_13px_-3px,#00000033_0px_-3px_0px_inset]">
-                <h1 class="mb-4 text-lg text-white text-center">We have a pool of outstanding and multi-disciplinary team of experienced experts from renowned colleges & universities both in Tanzania and beyond to cater to both tailor-made and customer-made clients' needs.</h1>
+            <div class="flex flex-col items-center space-y-8">
+                <!-- team description -->
+                <div class="max-w-3xl mx-auto px-6 py-8 bg-teal-800 rounded-3xl shadow-lg transform hover:scale-105 transition duration-300 animate-fade-in">
+                    <p class="text-lg text-center">
+                        We have a pool of outstanding and multi-disciplinary team of experienced experts from renowned colleges & universities both in Tanzania and beyond to cater to both tailor-made and customer-made clients' needs.
+                    </p>
+                </div>
 
-            </div>
-        </div>
+                <!-- invitation and buttons container -->
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-8 bg-teal-800 rounded-3xl shadow-lg animate-fade-in-up transform hover:scale-105 transition duration-300">
+                    <p class="text-base sm:text-lg text-center mb-6">
+                        Join our dynamic team and gain valuable experience in the wellness industry! We're excited to offer opportunities for both internships and volunteering positions. Whether you're looking to kickstart your career or contribute to our mission, we welcome your passion and dedication.
+                    </p>
 
+                    <!-- buttons container -->
+                    <div class="flex flex-col space-y-4 w-full sm:flex-row sm:space-y-0 sm:space-x-4 sm:justify-center">
+                        <!-- internship button -->
+                        <button class="group w-full sm:w-auto relative overflow-hidden h-12 rounded-full bg-yellow-500 px-3 sm:px-6 text-black text-xs sm:text-sm md:text-base transition-all duration-300 ease-out hover:bg-yellow-400 hover:shadow-lg">
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <a href="https://forms.gle/5th8WBHK7fe8gzYb7" class="relative whitespace-nowrap">INTERNSHIP REGISTRATION &rarr;</a>
+                        </button>
 
-     </section>
-
-     <!-- frequently asked questions -->
-    <section id="faq" class="justify-center items-center p-6 bg-white py-8">
-        <!-- first flex item -->
-         <div class="flex justify-center items-center md:justify-center lg:items-center lg:text-center px-8">
-            <div class="flex-row text-center lg:items-center justify-items-center px-8 space-y-6">
-                <!-- <h1 class="text-center lg:text-center text-green-900 font-bold">FREQUENTLY ASKED QUESTIONS</h1> -->
-                <h2 class="font-bold text-2xl text-center">Frequently Asked Questions.</h2>
-
-                <!-- button -->
-                <!-- <button class="relative z-0 h-12 rounded-full bg-teal-900 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-teal-900 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500 animate-bounce"><a href="#">Frequently Asked Questions</a></button> -->
-
-                <div class="flex-col mx-auto items-center">
-                    <!-- faq 1 -->
-                    <div class="space-y-4 text-start mt-6" >
-                        <h1 class="text-xl font-bold">What is Wellness?</h1>
-                        <p class="text-sm">
-                            Wellness signifies holistic well-being, encompassing an individual's mental, emotional, physical, occupational, intellectual, and spiritual dimensions. Each facet of wellness significantly impacts the overall quality of life, underscoring the importance of comprehensive consideration. In the absence of well-being, mental health disorders prevail, impeding human emotions, cognition, and behavior, thereby diminishing cognitive daily functioning. Consequently, wellness services address the complete spectrum of emotional, mental, physical, spiritual, environmental, occupational, cultural, and religious well-being, empowering individuals to lead purposeful and productive lives.
-                        </p>
-                        <hr>
-                    </div>
-
-                    <!-- faq 2 -->
-                    <div class="space-y-4 text-start mt-6" >
-                        <h1 class="text-xl font-bold">Do you also have programs for children as well?</h1>
-                        <p class="text-sm">
-                            Yes! we have designed a program
-                        </p>
-                        <hr>
-                    </div>
-
-                    <!-- faq 3 -->
-                    <div class="space-y-4 text-start mt-6" >
-                        <h1 class="text-xl font-bold">Why Wellness Services?</h1>
-                        <p class="text-sm">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum quo beatae repudiandae sed eius quis eos deserunt aliquam ex nam?
-                        </p>
-                        <hr>
+                        <!-- volunteering button -->
+                        <button class="group w-full sm:w-auto relative overflow-hidden h-12 rounded-full bg-yellow-500 px-3 sm:px-6 text-black text-xs sm:text-sm md:text-base transition-all duration-300 ease-out hover:bg-yellow-400 hover:shadow-lg">
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <a href="https://forms.gle/rwoJRKc1H6TnhJJC7" class="relative whitespace-nowrap">VOLUNTEER REGISTRATION &rarr;</a>
+                        </button>
                     </div>
                 </div>
             </div>
-         </div>
+        </div>
     </section>
 
+    <!-- Frequently Asked Questions -->
+    <section id="faq" class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-200">
+                    <button class="flex justify-between items-center w-full py-4 text-left text-lg font-medium text-gray-900 focus:outline-none">
+                        <span>What is Wellness?</span>
+                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="hidden pb-4 pr-4">
+                        <p class="text-gray-700">
+                            Wellness signifies holistic well-being, encompassing an individual's mental, emotional, physical, occupational, intellectual, and spiritual dimensions. Each facet of wellness significantly impacts the overall quality of life, underscoring the importance of comprehensive consideration. In the absence of well-being, mental health disorders prevail, impeding human emotions, cognition, and behavior, thereby diminishing cognitive daily functioning. Consequently, wellness services address the complete spectrum of emotional, mental, physical, spiritual, environmental, occupational, cultural, and religious well-being, empowering individuals to lead purposeful and productive lives.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-200">
+                    <button class="flex justify-between items-center w-full py-4 text-left text-lg font-medium text-gray-900 focus:outline-none">
+                        <span>Do you also have programs for children?</span>
+                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="hidden pb-4 pr-4">
+                        <p class="text-gray-700">
+                            Yes! We have designed programs specifically for children to promote their overall well-being and development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-200">
+                    <button class="flex justify-between items-center w-full py-4 text-left text-lg font-medium text-gray-900 focus:outline-none">
+                        <span>Why Wellness Services?</span>
+                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="hidden pb-4 pr-4">
+                        <p class="text-gray-700">
+                            Wellness services are essential for maintaining a balanced and healthy lifestyle. They help individuals manage stress, improve physical health, enhance mental clarity, and boost overall life satisfaction. By investing in wellness, you're investing in a better quality of life and long-term health benefits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('#faq button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('svg');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    
+                    // Close other open accordions
+                    accordionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            const otherContent = otherButton.nextElementSibling;
+                            const otherIcon = otherButton.querySelector('svg');
+                            otherContent.classList.add('hidden');
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
     <!-- footer -->
-    <footer class="py-14">
-        <div class="px-16 space-y-12">
-            <!-- item 1 -->
-             <div class="space-x-3 flex flex-row">
+    <footer class="bg-teal-900 text-white py-16">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 space-y-16">
+            <!-- Item 1: Logo and Slogan -->
+            <div class="flex flex-col items-center md:flex-row md:items-start space-y-6 md:space-y-0 md:space-x-8 text-center md:text-left">
+                <div class="w-40 h-40 flex-shrink-0">
+                    <img src="img/favicon-5.PNG" alt="Company Logo" class="w-full h-full object-contain rounded-md transition-all duration-300 hover:scale-110 hover:shadow-2xl">
+                </div>
                 <div>
-                    <img src="img/favicon-2.PNG" alt="" class="transform transition-all hover:scale-y-110 hover:shadow-2xl duration-300" width="160" height="160">
+                    <h2 class="text-3xl font-bold mb-4">Wellness is wealth, invest in it.</h2>
+                    <hr class="border-t-2 border-teal-700 w-32 mx-auto md:mx-0">
                 </div>
-                <div class="">
-                    <h1 class="text-white text-3xl">Wellness is wealth, invest in it.</h1>
-                    <h1 class="mt-2">
-                        <hr>
-                    </h1>
-                </div>
-             </div>
+            </div>
 
-            <!-- item 2 -->
-             <div class="flex flex-col md:flex-row md:space-x-16 space-y-8 md:space-y-0 px-16 text-center md:text-start">
-                <!-- company -->
-                <div class="flex-col space-y-3 text-white">
-                    <h1 class="text-2xl mb-2">Company</h1>
-                    <ul class="space-y-2">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    </ul>
-                </div>
+            <!-- Item 2: Footer Links and Contact Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left md:mx-auto">
+                <!-- Company and Quick Links in a column on mobile -->
+                <div class="flex flex-col sm:flex-row md:flex-col gap-16 md:gap-8 mx-auto">
+                    <!-- Company -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="hover:text-teal-300 transition-colors duration-200">About Us</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Services</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Careers</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Quick Links -->
-                <div class="flex-col space-y-3 text-white">
-                    <h1 class="text-2xl mb-2">Quick Links</h1>
-                    <ul class="space-y-2">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    </ul>
+                    <!-- Quick Links -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">FAQ</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Site Map</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- For you -->
-                <div class="flex-col space-y-3 text-white">
-                    <h1 class="text-2xl mb-2">For You</h1>
+                <!-- For You -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold mb-4">For You</h3>
                     <ul class="space-y-2">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Resources</a></li>
+                        <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Blog</a></li>
+                        <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-teal-300 transition-colors duration-200">Events</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Details -->
-                <div class="flex-col space-y-3 text-white">
-                    <h1 class="text-2xl mb-2">Contact Details</h1>
-                    <ul class="space-y-6 text-lg">
-                        <div class="flex flex-row mx-auto space-x-2">
-                            <div>
-                                <img src="img/location-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
+                <div class="space-y-6 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Details</h3>
+                    <ul class="space-y-4">
+                        <li class="flex flex-col items-center md:items-start space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <img src="img/location-full.png" alt="Location" class="w-6 h-6 transition-transform duration-300 hover:scale-125">
+                                <span class="font-semibold">Our Location</span>
                             </div>
-                            <div>
-                                <li><a href="#about">65, Philemon Road/Rafiki Road.
-                                    P.O.Box 8545 Kunduchi/Bahari Beach - Dar-es-salaam</a></li>
+                            <div class="w-full sm:w-[450px] lg:w-[350px] h-[150px]">
+                                <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8825772464047!2d39.19777107410257!3d-6.661471665120351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c510da154bb9f%3A0x7f7f6fd6c7345ca2!2sIntercontinental%20Well-being%20Services%20Limited!5e0!3m2!1sen!2stz!4v1728717331149!5m2!1sen!2stz" width="450" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-md shadow-md w-full sm:w-[450px] lg:w-[350px]"
+                            ></iframe>
                             </div>
-                        </div>
-
-                        <div class="flex flex-row mx-auto space-x-2">
-                            <div>
-                                <img src="img/emial-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
-                            </div>
-                            <div>
-                                <li><a href="mailto:">bahati@iwslimited.co.tz Cc bahatimandago@gmail.com</a></li>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-row mx-auto space-x-2">
-                            <div>
-                                <img src="img/phone-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
-                            </div>
-                            <div>
-                                <li><a href="#about">+255 753 535 658 / +255 745 700 081</a></li>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-row mx-auto space-x-2">
-                            <div>
-                                <img src="img/whatsapp-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30">
-                            </div>
-                            <div>
-                                <li><a href="https://wa.link/yweaub">Whatsapp Us</a></li>
-                            </div>
-                        </div>
-                        
-                        
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-3">
+                            <img src="img/emial-full.png" alt="Email" class="w-6 h-6 transition-transform duration-300 hover:scale-125">
+                            <a href="mailto:bahati@iwslimited.co.tz" class="hover:text-teal-300 transition-colors duration-200">bahati@iwslimited.co.tz</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-3">
+                            <img src="img/phone-full.png" alt="Phone" class="w-6 h-6 transition-transform duration-300 hover:scale-125">
+                            <span>+255 753 535 658 / +255 745 700 081</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-3">
+                            <img src="img/whatsapp-full.png" alt="WhatsApp" class="w-6 h-6 transition-transform duration-300 hover:scale-125">
+                            <a href="https://wa.link/yweaub" class="hover:text-teal-300 transition-colors duration-200">WhatsApp Us</a>
+                        </li>
                     </ul>
+                    <div class="flex justify-center md:justify-start">
+                        <div class="relative group">
+                            <img src="img/QR.png" alt="QR Code" class="w-32 h-32 rounded-lg shadow-lg">
+                            <div class="absolute hidden group-hover:block bg-black text-white p-2 rounded-xl text-sm bottom-full left-1/2 transform -translate-x-1/2 mb-2">
+                                Scan the QR code to chat with us on WhatsApp
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
+            </div>
 
-            <!-- item 3 -->
-            <div class="flex flex-row justify-between text-white text-center">
-                <div>
-                    @Copyright. <span class="font-bold">Intercontinental Wellness Services.Ltd</span>. All rights Reserved.
+            <!-- Item 3: Copyright and Social Media Links -->
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-8 border-t border-teal-700">
+                <div class="text-sm text-center md:text-left">
+                    &copy; 2023 <span class="font-bold">Intercontinental Wellness Services Ltd</span>. All rights reserved.
                 </div>
-                <div class="flex flex-row space-x-4">
-                    <div>
-                        <a href="https://www.instagram.com/iwslimitedtz/"><img src="img/instagram-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
-                    </div>
-                    <div>
-                        <a href="https://www.linkedin.com/company/iwslimitedtz/"><img src="img/linkedin.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/iwslimitedtz"><img src="img/facebook-full.png" alt="" class="transform transition-all hover:scale-125 hover:shadow-2xl duration-300" width="30" height="30"></a>
-                    </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/iwslimitedtz/" class="transition-transform duration-300 hover:scale-125">
+                        <img src="img/instagram-full.png" alt="Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.linkedin.com/company/iwslimitedtz/" class="transition-transform duration-300 hover:scale-125">
+                        <img src="img/linkedin.png" alt="LinkedIn" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.facebook.com/iwslimitedtz" class="transition-transform duration-300 hover:scale-125">
+                        <img src="img/facebook-full.png" alt="Facebook" class="w-8 h-8">
+                    </a>
                 </div>
             </div>
         </div>
